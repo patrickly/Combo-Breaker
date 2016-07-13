@@ -7,6 +7,7 @@ public class ComboLockTester {
       System.out.println(test.getDialPosition());
       test.turnRight(5);
       System.out.println(test.getDialPosition());
+      int z = 3;
    }
 
 }
@@ -16,4 +17,7 @@ public class ComboLockTester {
 after ticks decrement -5
 after past 0 mark 35
 35
+
 */
+
+//testing
