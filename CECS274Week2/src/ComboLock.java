@@ -45,19 +45,33 @@ public class ComboLock {
 	 * @param ticks Enter an integer value 
 	 */
 	public void turnLeft(int ticks) {
+	   ticks = ticks % 40;
+	   System.out.println("The value of ticks modolo 40 is " + ticks);
+	   
 	   mDial += ticks; 
+	      System.out.println("after ticks decrement " + mDial);
+
+	  
+	      System.out.println("after past 0 mark " + mDial);
+	         
+	        
 	}
+	
 	
 	/**
     * 
     * @param ticks Enter an integer value 
     */
 	public void turnRight(int ticks) {
+	   int fullRotation = 40;
+	   ticks = ticks % fullRotation;
+      System.out.println("The value of ticks modolo 40 is " + ticks);
+
       mDial -= ticks;
       System.out.println("after ticks decrement " + mDial);
 
       if(mDial < 0) {
-         mDial = 40 + mDial; // 40 is a magic number
+         mDial = fullRotation + mDial; // 40 is a magic number. 40 is a full-spin tick. 
       }
       System.out.println("after past 0 mark " + mDial);
          
