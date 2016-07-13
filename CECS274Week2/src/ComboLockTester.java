@@ -7,7 +7,7 @@ public class ComboLockTester {
       System.out.println(test.getDialPosition());
       test.turnRight(5);
       System.out.println(test.getDialPosition());
-      int z = 3;
+      
    }
 
 }
