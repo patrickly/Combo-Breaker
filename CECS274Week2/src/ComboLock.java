@@ -28,7 +28,7 @@ public class ComboLock {
 	 * 
 	 * @return mDial Returns the current dial position of the lock
 	 */
-	public int getDialPosition(){
+	public int getDialPosition() {
 	   return mDial; 
 	}
 	
@@ -36,7 +36,7 @@ public class ComboLock {
 	 * Reset() Sets the dial position back to 0 
 	 * and start the unlocking procedure over again
 	 */
-	public void reset(){
+	public void reset() {
 	   mDial = 0;
 	}
 	
@@ -44,16 +44,29 @@ public class ComboLock {
 	 * 
 	 * @param ticks Enter an integer value 
 	 */
-	public void turnLeft(int ticks){
-	   mDial -= ticks; 
+	public void turnLeft(int ticks) {
+	   mDial += ticks; 
 	}
 	
 	/**
     * 
     * @param ticks Enter an integer value 
     */
-	public void turnRight(int ticks){
-      mDial += ticks; 
+	public void turnRight(int ticks) {
+      mDial -= ticks;
+      int count = 0;
+      
+      while(!(count==ticks)) {
+         count++;
+         mDial -= count;
+      }
+      
    }
+	
+	public boolean open() {
+	   
+	   
+	   return false;
+	}
 	
 }
