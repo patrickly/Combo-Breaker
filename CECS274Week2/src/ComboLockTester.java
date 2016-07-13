@@ -3,7 +3,7 @@ public class ComboLockTester {
 
    public static void main(String[] args) {
 
-      ComboLock test = new ComboLock(1,2,3);
+      ComboLock test = new ComboLock (1,2,3);
       System.out.println(test.getDialPosition());
       test.turnRight(30);
       System.out.println(test.getDialPosition());
@@ -12,6 +12,12 @@ public class ComboLockTester {
       test.turnRight(30);
       System.out.println(test.getDialPosition());
       System.out.println("Amount of turns: " + test.getAmountOfTurns());
+
+      System.out.println("Direction 1: " + test.getTurn1());
+
+      System.out.println("Direction 2: " + test.getTurn2());
+
+      System.out.println("Direction 3: " + test.getTurn3());
 
 
    }

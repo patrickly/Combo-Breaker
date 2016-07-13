@@ -15,6 +15,9 @@ public class ComboLock {
 	private int mLastSpinCombo;
 
 	private String mSpinDirection;
+	private String mSpinLeft = "left";
+	private String mSpinRight = "right";
+	
 	private String mSpinDirection1;
 	private String mSpinDirection2;
 	private String mSpinDirection3;
@@ -61,9 +64,13 @@ public class ComboLock {
 	 * @param ticks Enter an integer value 
 	 */
 	public void turnLeft(int ticks) {
-	   mSpinDirection = "left";
 	   mAmountOfTurns++;
+   	mSpinDirection1 = (mAmountOfTurns == 1) ? mSpinLeft : mSpinRight;
+      mSpinDirection2 = (mAmountOfTurns == 2) ? mSpinLeft : mSpinRight;
+      mSpinDirection3 = (mAmountOfTurns == 3) ? mSpinLeft : mSpinRight;
+      System.out.println("The amount of turn is/are: " + mAmountOfTurns);
 
+   
 	   int fullRotation = 40;
 
 	   ticks = ticks % fullRotation;
@@ -72,7 +79,6 @@ public class ComboLock {
 	   mDial += ticks; 
 	      System.out.println("after ticks decrement " + mDial);
 
-	  
 	      System.out.println("after past 0 mark " + mDial);
 	         
 	        
@@ -84,9 +90,12 @@ public class ComboLock {
     * @param ticks Enter an integer value 
     */
 	public void turnRight(int ticks) {
-	   mSpinDirection = "right";
 	   mAmountOfTurns++;
+	   mSpinDirection1 = (mAmountOfTurns == 1) ? mSpinRight : mSpinLeft;
+      mSpinDirection2 = (mAmountOfTurns == 2) ? mSpinRight : mSpinLeft;
+      mSpinDirection3 = (mAmountOfTurns == 3) ? mSpinRight : mSpinLeft;
 
+      System.out.println("The amount of turn is/are: " + mAmountOfTurns);
 	   int fullRotation = 40;
 	   ticks = ticks % fullRotation;
       System.out.println("The value of ticks modolo 40 is " + ticks);
@@ -102,9 +111,24 @@ public class ComboLock {
         
       }
 	
-	public int getAmountOfTurns(){
+	public int getAmountOfTurns() {
 	   return mAmountOfTurns;
 	}
+	
+	public String getTurn1() {
+	   return mSpinDirection1;
+	}
+	
+   public String getTurn2() {
+      return mSpinDirection2;
+
+      }
+   
+   
+   public String getTurn3() {
+      return mSpinDirection3;
+
+   }
       
    
 	
