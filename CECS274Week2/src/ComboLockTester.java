@@ -7,9 +7,9 @@ public class ComboLockTester {
       System.out.println(test.getDialPosition());
       test.turnRight(30);
       System.out.println(test.getDialPosition());
-    //  test.turnLeft(10);
+      test.turnLeft(10);
       System.out.println(test.getDialPosition());
-      //test.turnRight(30);
+      test.turnRight(30);
       System.out.println(test.getDialPosition());
       System.out.println("Amount of turns: " + test.getAmountOfTurns());
 
