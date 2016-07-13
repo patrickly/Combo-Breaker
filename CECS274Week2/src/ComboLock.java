@@ -1,7 +1,6 @@
 
 public class ComboLock {
-	int x = 2;
-	int y = 3;
+
 	
 	private int mCombo1;
 	private int mCombo2;
@@ -41,12 +40,20 @@ public class ComboLock {
 	   mDial = 0;
 	}
 	
+	/**
+	 * 
+	 * @param ticks Enter an integer value 
+	 */
 	public void turnLeft(int ticks){
-	   
+	   mDial -= ticks; 
 	}
 	
+	/**
+    * 
+    * @param ticks Enter an integer value 
+    */
 	public void turnRight(int ticks){
-      
+      mDial += ticks; 
    }
 	
 }
