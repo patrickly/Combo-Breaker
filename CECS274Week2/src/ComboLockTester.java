@@ -5,7 +5,7 @@ public class ComboLockTester {
 
       ComboLock test = new ComboLock(1,2,3);
       System.out.println(test.getDialPosition());
-      test.turnRight(1);
+      test.turnRight(41);
       System.out.println(test.getDialPosition());
       test.turnLeft(0);
       System.out.println(test.getDialPosition());
@@ -36,7 +36,7 @@ ticks can be above 39, such as 100, 200.
  turnRight(41) 
  starting position: 0
  expected position: 39
- actual position: -1
+ actual position: 39
  
  turnRight(1)
  starting position: 0
@@ -53,6 +53,18 @@ Using chrome's console, I performed entered these operations:
 0
 
 20%40 = 20. So ticks value doesn't have be greater than 41. I can just do ticks % 40. 
+
+Well let's test out the ticks % 40 trick. I'm going to change the body of the turnRight() method. 
+
+ turnRight(41) 
+ starting position: 0
+ expected position: 39
+ actual position: 
+ 
+ turnRight(1)
+ starting position: 0
+ expected position: 39
+ actual position: 39
 
 */
 
