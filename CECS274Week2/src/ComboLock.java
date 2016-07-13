@@ -6,6 +6,22 @@ public class ComboLock {
 	private int mCombo2;
 	private int mCombo3;
 	private int mDial;
+	
+	/**
+	 * Later, I'm going to add member variables for the boolean open method.
+	 */
+	private int mFirstSpinCombo;
+	private int mSecondSpinCombo;
+	private int mLastSpinCombo;
+
+	private String mSpinDirection;
+	private String mSpinDirection1;
+	private String mSpinDirection2;
+	private String mSpinDirection3;
+	
+	private int mAmountOfTurns;
+
+
 
 	/**
 	 *Constructor 
@@ -45,7 +61,12 @@ public class ComboLock {
 	 * @param ticks Enter an integer value 
 	 */
 	public void turnLeft(int ticks) {
-	   ticks = ticks % 40;
+	   mSpinDirection = "left";
+	   mAmountOfTurns++;
+
+	   int fullRotation = 40;
+
+	   ticks = ticks % fullRotation;
 	   System.out.println("The value of ticks modolo 40 is " + ticks);
 	   
 	   mDial += ticks; 
@@ -63,6 +84,9 @@ public class ComboLock {
     * @param ticks Enter an integer value 
     */
 	public void turnRight(int ticks) {
+	   mSpinDirection = "right";
+	   mAmountOfTurns++;
+
 	   int fullRotation = 40;
 	   ticks = ticks % fullRotation;
       System.out.println("The value of ticks modolo 40 is " + ticks);
@@ -77,6 +101,10 @@ public class ComboLock {
          
         
       }
+	
+	public int getAmountOfTurns(){
+	   return mAmountOfTurns;
+	}
       
    
 	

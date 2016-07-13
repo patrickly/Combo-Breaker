@@ -5,10 +5,14 @@ public class ComboLockTester {
 
       ComboLock test = new ComboLock(1,2,3);
       System.out.println(test.getDialPosition());
-      test.turnRight(45);
+      test.turnRight(30);
       System.out.println(test.getDialPosition());
-      test.turnLeft(40);
+    //  test.turnLeft(10);
       System.out.println(test.getDialPosition());
+      //test.turnRight(30);
+      System.out.println(test.getDialPosition());
+      System.out.println("Amount of turns: " + test.getAmountOfTurns());
+
 
    }
 
@@ -66,6 +70,9 @@ Well let's test out the ticks % 40 trick. I'm going to change the body of the tu
  actual position: 39
  
  Good news, actual position == expected position. 39 == 39. So the ticks % 40 does the trick. 
+
+
+So everytime turnRight or turnLeft is performed, mAmountOfTurns should go up by 1. 
 
 */
 
