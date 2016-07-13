@@ -5,11 +5,10 @@ public class ComboLockTester {
 
       ComboLock test = new ComboLock(1,2,3);
       System.out.println(test.getDialPosition());
-      test.turnRight(41);
+      test.turnRight(45);
       System.out.println(test.getDialPosition());
-      test.turnLeft(0);
+      test.turnLeft(40);
       System.out.println(test.getDialPosition());
-      System.out.println("modulus test: " + 20%40);
 
    }
 
@@ -36,7 +35,7 @@ ticks can be above 39, such as 100, 200.
  turnRight(41) 
  starting position: 0
  expected position: 39
- actual position: 39
+ actual position: -1
  
  turnRight(1)
  starting position: 0
@@ -59,12 +58,14 @@ Well let's test out the ticks % 40 trick. I'm going to change the body of the tu
  turnRight(41) 
  starting position: 0
  expected position: 39
- actual position: 
+ actual position: 39
  
  turnRight(1)
  starting position: 0
  expected position: 39
  actual position: 39
+ 
+ Good news, actual position == expected position. 39 == 39. So the ticks % 40 does the trick. 
 
 */
 
