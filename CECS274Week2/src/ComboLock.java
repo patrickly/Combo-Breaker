@@ -32,4 +32,21 @@ public class ComboLock {
 	public int getDialPosition(){
 	   return mDial; 
 	}
+	
+	/**
+	 * Reset() Sets the dial position back to 0 
+	 * and start the unlocking procedure over again
+	 */
+	public void reset(){
+	   mDial = 0;
+	}
+	
+	public void turnLeft(int ticks){
+	   
+	}
+	
+	public void turnRight(int ticks){
+      
+   }
+	
 }
