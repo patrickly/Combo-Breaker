@@ -54,14 +54,17 @@ public class ComboLock {
     */
 	public void turnRight(int ticks) {
       mDial -= ticks;
-      int count = 0;
-      
-      while(!(count==ticks)) {
-         count++;
-         mDial -= count;
+      System.out.println("after ticks decrement " + mDial);
+
+      if(mDial < 0) {
+         mDial = 40 + mDial; // 40 is a magic number
+      }
+      System.out.println("after past 0 mark " + mDial);
+         
+        
       }
       
-   }
+   
 	
 	public boolean open() {
 	   
