@@ -12,8 +12,8 @@ public static void main(String[] args) {
    int rng1 = generator.nextInt(40);
    int rng2 = generator.nextInt(40);
    int rng3 = generator.nextInt(40);
-   int ex = 10, ex2 = 13, ex3 = 12;
-   ComboLock randomLock = new ComboLock(ex, rng2, rng3);
+   int ex = 10, ex2 = 13, ex3 = 1;
+   ComboLock randomLock = new ComboLock(ex, ex2, ex3);
    
    int getDialinit = randomLock.getDialPosition();
  //  int getDial3 = randomLock.getDialPosition();
