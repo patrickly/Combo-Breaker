@@ -105,8 +105,6 @@ public class ComboLock {
 
 
 	 
-    //  mSpinDirection2 = (mAmountOfTurns == 2) ? mSpinRight : mSpinLeft;
-   //   mSpinDirection3 = (mAmountOfTurns == 3) ? mSpinRight : mSpinLeft;
 
       System.out.println("The amount of turn is/are: " + mAmountOfTurns);
 	   int fullRotation = 40;
@@ -140,14 +138,15 @@ public class ComboLock {
 	}
 	
 	public String getTurn1() {
+
 	   return mSpinDirection1;
 	}
 	
    public String getTurn2() {
+
       return mSpinDirection2;
 
       }
-   
    
    public String getTurn3() {
       return mSpinDirection3;
@@ -157,8 +156,10 @@ public class ComboLock {
    
 	
 	public boolean open() {
-	   
-	   
+	   System.out.println();
+	   if(mCombo1 == mFirstSpinCombo){
+	      return true;
+	   }
 	   return false;
 	}
 	
