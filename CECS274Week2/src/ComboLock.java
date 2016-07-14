@@ -80,7 +80,9 @@ public class ComboLock {
 	   
 	   mDial += ticks; 
 	      System.out.println("after ticks decrement " + mDial);
-
+	      if(mDial > 39) { // 39 is a max number
+	         mDial = -(fullRotation - mDial) ; // 40 is a magic number. 40 is a full-spin tick. 
+	      }
 	      System.out.println("after past 0 mark " + mDial);
          
       if (mAmountOfTurns == 1) {
