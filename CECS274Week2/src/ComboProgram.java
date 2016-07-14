@@ -12,7 +12,7 @@ public static void main(String[] args) {
    int rng1 = generator.nextInt(40);
    int rng2 = generator.nextInt(40);
    int rng3 = generator.nextInt(40);
-   int ex = 10, ex2 = 13, ex3 = 27;
+   int ex = 10, ex2 = 13, ex3 = 20;
    ComboLock randomLock = new ComboLock(ex, ex2, ex3);
    
    int getDialinit = randomLock.getDialPosition();
@@ -53,14 +53,19 @@ public static void main(String[] args) {
   
   // gonna use if operator instead of ternary operator since ex3 = 27 didn't give the right result for the ternary just above.
   
+  /*
   if (ex3>ex2) {
      ticks3 = 40 - (ex3-ex2);  // 40 is full-rotation
      
   } else {
      ticks3 = ex2 - ex3; 
   }
+  */
   
-  // I can probably use the ternary operator again. Instead of ex2-ex2+ex2. It might be 40-(ex3-ex2) whenever ex3>ex2.
+  // I can probably use the ternary operator again. Instead of ex2-ex2+ex2. <---I probably got confused.It might be 40-(ex3-ex2) whenever ex3>ex2. 
+  // I came up with 40-(ex3-ex2) when I made ex3 = 15 because I know turnRight(38) will give 15. Obviously turnRight(40), a full Rotation, will give 13.
+  // So subtract ex2 from ex3 first, then subtract from 40, notice the parenthesis. 
+  ticks3 = (ex3 > ex2 ) ? 40-(ex3-ex2) : ex2-ex3 ;
   
   randomLock.turnRight(ticks3);
   System.out.println("\n\n----\n get 3rd dial position " + randomLock.getDialPosition());
