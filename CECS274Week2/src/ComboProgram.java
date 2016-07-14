@@ -48,8 +48,11 @@ public static void main(String[] args) {
   //  40 - 13 = 27.    40 -  13 = ex3.   
   //  2nd Dial position is at 13.  So when ex3 is greater than 2nd dial position, 27 > 13, perform fullRotation minus 2nd Dial Position and then add 2ndDial Position
   //  So 27 > 13, 13-13 = 0. ticks3 += 13. Then 40-13 = 27. ticks3 += 13. ticks3 is now 26 cuz of 13 + 13. 
+  ticks3 = (ex3 > ex2 ) ? ex3-ex2+ex2 : 0 ;   // expression 2 or false value is currently . true condition expression 1 is ex3-ex2+ex2. so ticks3 = expression1 whenever ex3 > ex2. 
+  // when ex3 < ex2, the expression 2 can be fullRotation - ex2. ex. 12 < 13. ex3 is 12, ex2 is 13.  so ticks3 = ex2-ex3. ticks3 should be 1 when ex2 is 13 and ex3 is 12.
   
-  randomLock.turnRight(ticks3);
+  
+  randomLock.turnRight(1);
   System.out.println("\n\n----\n get 3rd dial position " + randomLock.getDialPosition());
 
   
