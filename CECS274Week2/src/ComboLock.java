@@ -65,10 +65,15 @@ public class ComboLock {
 	 */
 	public void turnLeft(int ticks) {
 	   mAmountOfTurns++;
-   	mSpinDirection1 = (mAmountOfTurns == 1) ? mSpinLeft : mSpinRight;
-      mSpinDirection2 = (mAmountOfTurns == 2) ? mSpinLeft : mSpinRight;
-      mSpinDirection3 = (mAmountOfTurns == 3) ? mSpinLeft : mSpinRight;
-      System.out.println("The amount of turn is/are: " + mAmountOfTurns);
+	   if (mAmountOfTurns == 1) {
+         mSpinDirection1 = mSpinLeft;
+      } else if (mAmountOfTurns == 2){
+         mSpinDirection2 = mSpinLeft;
+      } else if (mAmountOfTurns == 3){
+         mSpinDirection3 = mSpinLeft;
+      } else {
+         System.out.println("mAmountOfTurns is not 1, 2, nor 3");
+      }  System.out.println("The amount of turn is/are: " + mAmountOfTurns);
 
    
 	   int fullRotation = 40;
@@ -91,9 +96,22 @@ public class ComboLock {
     */
 	public void turnRight(int ticks) {
 	   mAmountOfTurns++;
-	   mSpinDirection1 = (mAmountOfTurns == 1) ? mSpinRight : mSpinLeft;
-      mSpinDirection2 = (mAmountOfTurns == 2) ? mSpinRight : mSpinLeft;
-      mSpinDirection3 = (mAmountOfTurns == 3) ? mSpinRight : mSpinLeft;
+	   
+	   
+	   System.out.println("The amount of turn is " + mAmountOfTurns);
+
+
+	   if (mAmountOfTurns == 1) {
+	      mSpinDirection1 = mSpinRight;
+	   } else if (mAmountOfTurns == 2){
+	      mSpinDirection2 = mSpinRight;
+	   } else if (mAmountOfTurns == 3){
+	      mSpinDirection3 = mSpinRight;
+	   } else {
+	      System.out.println("mAmountOfTurns is not 1, 2, nor 3");
+	   }
+    //  mSpinDirection2 = (mAmountOfTurns == 2) ? mSpinRight : mSpinLeft;
+   //   mSpinDirection3 = (mAmountOfTurns == 3) ? mSpinRight : mSpinLeft;
 
       System.out.println("The amount of turn is/are: " + mAmountOfTurns);
 	   int fullRotation = 40;
