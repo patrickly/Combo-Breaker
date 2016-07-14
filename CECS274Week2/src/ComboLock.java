@@ -65,15 +65,7 @@ public class ComboLock {
 	 */
 	public void turnLeft(int ticks) {
 	   mAmountOfTurns++;
-	   if (mAmountOfTurns == 1) {
-         mSpinDirection1 = mSpinLeft;
-      } else if (mAmountOfTurns == 2){
-         mSpinDirection2 = mSpinLeft;
-      } else if (mAmountOfTurns == 3){
-         mSpinDirection3 = mSpinLeft;
-      } else {
-         System.out.println("mAmountOfTurns is not 1, 2, nor 3");
-      }  System.out.println("The amount of turn is/are: " + mAmountOfTurns);
+	  
 
    
 	   int fullRotation = 40;
@@ -85,8 +77,19 @@ public class ComboLock {
 	      System.out.println("after ticks decrement " + mDial);
 
 	      System.out.println("after past 0 mark " + mDial);
-	         
-	        
+         
+      if (mAmountOfTurns == 1) {
+         mSpinDirection1 = mSpinLeft;
+         mFirstSpinCombo = mDial;
+      } else if (mAmountOfTurns == 2){
+         mSpinDirection2 = mSpinLeft;
+         mSecondSpinCombo = mDial;
+      } else if (mAmountOfTurns == 3){
+         mSpinDirection3 = mSpinLeft;
+         mLastSpinCombo = mDial;
+      } else {
+         System.out.println("mAmountOfTurns is not 1, 2, nor 3");
+      }  System.out.println("The amount of turn is/are: " + mAmountOfTurns);   
 	}
 	
 	
@@ -101,15 +104,7 @@ public class ComboLock {
 	   System.out.println("The amount of turn is " + mAmountOfTurns);
 
 
-	   if (mAmountOfTurns == 1) {
-	      mSpinDirection1 = mSpinRight;
-	   } else if (mAmountOfTurns == 2){
-	      mSpinDirection2 = mSpinRight;
-	   } else if (mAmountOfTurns == 3){
-	      mSpinDirection3 = mSpinRight;
-	   } else {
-	      System.out.println("mAmountOfTurns is not 1, 2, nor 3");
-	   }
+	 
     //  mSpinDirection2 = (mAmountOfTurns == 2) ? mSpinRight : mSpinLeft;
    //   mSpinDirection3 = (mAmountOfTurns == 3) ? mSpinRight : mSpinLeft;
 
@@ -126,8 +121,19 @@ public class ComboLock {
       }
       System.out.println("after past 0 mark " + mDial);
          
-        
-      }
+      if (mAmountOfTurns == 1) {
+         mSpinDirection1 = mSpinRight;
+         mFirstSpinCombo = mDial;
+      } else if (mAmountOfTurns == 2){
+         mSpinDirection2 = mSpinRight;
+         mSecondSpinCombo = mDial;
+      } else if (mAmountOfTurns == 3){
+         mSpinDirection3 = mSpinRight;
+         mLastSpinCombo = mDial;
+      } else {
+         System.out.println("mAmountOfTurns is not 1, 2, nor 3");
+      }  
+   }
 	
 	public int getAmountOfTurns() {
 	   return mAmountOfTurns;
