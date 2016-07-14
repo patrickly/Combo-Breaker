@@ -21,6 +21,7 @@ public class ComboLockTester {
       test.reset(); // 
       System.out.println(test.open()); //expected false after reset, actual: false
 
+
    }
 
 }
