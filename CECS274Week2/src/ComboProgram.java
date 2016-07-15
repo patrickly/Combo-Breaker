@@ -1,10 +1,9 @@
-import java.util.Random;
+import java.util.*;
 
 public class ComboProgram {
 
    
 
-   //testin
 
 public static void main(String[] args) {
    
@@ -13,7 +12,18 @@ public static void main(String[] args) {
    int rng2 = generator.nextInt(40);
    int rng3 = generator.nextInt(40);
    int ex = 10, ex2 = 13, ex3 = 20;
-   ComboLock randomLock = new ComboLock(ex, ex2, ex3);
+   
+   do{
+   Scanner in = new Scanner(System.in);
+   System.out.print("Enter combo guess: ");
+   String[] userInput = in.nextLine().split(" ");
+   ex = Integer.parseInt(userInput[0]);
+   ex2 = Integer.parseInt(userInput[1]);
+   ex3 = Integer.parseInt(userInput[2]);
+   
+   System.out.println(ex + " " + ex2 + " " + ex3 + " ");
+   
+   ComboLock randomLock = new ComboLock(rng1, rng2, rng3);
    
    int getDialinit = randomLock.getDialPosition();
  //  int getDial3 = randomLock.getDialPosition();
@@ -71,16 +81,17 @@ public static void main(String[] args) {
   System.out.println("\n\n----\n get 3rd dial position " + randomLock.getDialPosition());
 
   
-  /*
+  
    System.out.println("(Random secret combination: " + rng1 + 
     " " + rng2 + " " + rng3 + ")");
  
-   */
+   
   
   
   System.out.println("(1st combo testing secret combination: " + ex + 
    " " + ex2 + " " + ex3 + ")");
-
+   }
+   while(!(ex == 0 && ex2 == 0 && ex3 == 0));
   
 
   }
