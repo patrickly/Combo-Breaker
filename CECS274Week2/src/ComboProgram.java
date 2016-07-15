@@ -13,7 +13,14 @@ public static void main(String[] args) {
    int rng3 = generator.nextInt(40);
    int ex = 10, ex2 = 13, ex3 = 20;
    
+   ComboLock randomLock = new ComboLock(rng1, rng2, rng3);
+   
+   System.out.println("(Random secret combination: " + rng1 + 
+         " " + rng2 + " " + rng3 + ")");
+   
    do{
+      
+      
    Scanner in = new Scanner(System.in);
    System.out.print("Enter combo guess: ");
    String[] userInput = in.nextLine().split(" ");
@@ -23,7 +30,8 @@ public static void main(String[] args) {
    
    System.out.println(ex + " " + ex2 + " " + ex3 + " ");
    
-   ComboLock randomLock = new ComboLock(rng1, rng2, rng3);
+
+      
    
    int getDialinit = randomLock.getDialPosition();
  //  int getDial3 = randomLock.getDialPosition();
@@ -90,9 +98,17 @@ public static void main(String[] args) {
   
   System.out.println("(1st combo testing secret combination: " + ex + 
    " " + ex2 + " " + ex3 + ")");
+  
+  if(randomLock.open()){
+     System.out.println("Congrats you have won free concert tickets.");
+  }else{
+     System.out.println("Sorry not a winner.");
+  }
+  
    }
    while(!(ex == 0 && ex2 == 0 && ex3 == 0));
   
+   
 
   }
 }
