@@ -1,4 +1,9 @@
 ////////////////////////////////////////////////////////////////////////////////
+/**
+ * Represents a combination lock with members for the combinations, 
+ * dial position, user's combinations, spin directions, and amount of turns. 
+ */   
+
 public class ComboLock {
 
 	private int mCombo1;
@@ -21,14 +26,14 @@ public class ComboLock {
 
 
 	/**
-	 *Constructor 
+	 * Constructs a ComboLock object that takes three values
+	 * for the lock's combination.
 	 *
 	 * @param combo1 Enter integer values for the range: 0-39
 	 * @param combo2 Enter integer values for the range: 0-39
 	 * @param combo3 Enter integer values for the range: 0-39
 	 */
-	public ComboLock(int combo1, int combo2,
-	 int combo3) {
+	public ComboLock(int combo1, int combo2, int combo3) {
 	   
 		mCombo1 = combo1;
 		mCombo2 = combo2;
@@ -38,19 +43,17 @@ public class ComboLock {
 	}
 	
 	/**
-	 * 
-	 * @return mDial Returns the current dial position of the lock
+	 *  Gets the current dial position of the lock.
+	 *  
+	 * @return an Integer for the dial position.
 	 */
 	public int getDialPosition() {
 	   return mDial; 
 	}
 	
 	/**
-	 * 
-	 * 
-	 * 
-	 * Reset() Sets the dial position back to 0 
-	 * and start the unlocking procedure over again
+	 * Reset() Sets the dial position back to 0
+	 * and starts the unlocking procedure over again
 	 */
 	public void reset() {
 	   mDial = 0;
@@ -61,23 +64,25 @@ public class ComboLock {
 	}
 	
 	/**
+	 * Turn the dial to left by the specified number of ticks
+	 * from the current position
 	 * 
-	 * @param ticks Enter an integer value 
+	 * @param ticks the integer value for turning the lock 
 	 */
 	public void turnLeft(int ticks) {
 	   mAmountOfTurns++;
 	   mSpinLeft = "left";
 
-   
+	   int maxDialValue = 39;
 	   int fullRotation = 40;
-
 	   ticks = ticks % fullRotation;
 	   
 	   mDial += ticks; 
-	      if(mDial > 39) { // 39 is a max number
-	         mDial = -(fullRotation - mDial) ; 
-	      }
+      if(mDial > maxDialValue) { 
+         mDial = -(fullRotation - mDial) ; 
+      }
          
+	      
       if (mAmountOfTurns == 1) {
          mSpinDirection1 = mSpinLeft;
          mFirstSpinCombo = mDial;
@@ -94,23 +99,26 @@ public class ComboLock {
 	
 	
 	/**
+    * Turn the dial to right by the specified number of ticks
+    * from the current position
     * 
-    * @param ticks Enter an integer value 
+    * @param ticks the integer value for turning the lock 
     */
 	public void turnRight(int ticks) {
 	   mAmountOfTurns++;
 	   mSpinRight = "right";
 	    
+	   int minDialValue = 39;
 	   int fullRotation = 40;
 	   ticks = ticks % fullRotation;
      
       mDial -= ticks;
       
-      if(mDial < 0) {
-         mDial = fullRotation + mDial; // 
+      if(mDial < minDialValue) {
+         mDial = fullRotation + mDial;  
       }
      
-         
+    
       if (mAmountOfTurns == 1) {
          mSpinDirection1 = mSpinRight;
          mFirstSpinCombo = mDial;
@@ -125,7 +133,11 @@ public class ComboLock {
       } 
    }
 	
-	
+	/**
+	 * Opens the lock
+	 * 
+	 * @return a Boolean for the lock.
+	 */
 	public boolean open() {
 	   
 	   if(mCombo1 == mFirstSpinCombo && mCombo2 == mSecondSpinCombo
