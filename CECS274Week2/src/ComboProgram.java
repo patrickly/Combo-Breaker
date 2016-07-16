@@ -29,20 +29,20 @@ public class ComboProgram {
          userC2 = Integer.parseInt(userInput[1]);
          userC3 = Integer.parseInt(userInput[2]);
 
-         int getDialinit = randomLock.getDialPosition();
+  //       int getDialinit = randomLock.getDialPosition();
 
          int fullRotation = 40;
          int ticks1 = fullRotation - userC1; 
 
          randomLock.turnRight(ticks1);
 
-         int getDial1 = randomLock.getDialPosition();
+//         int getDial1 = randomLock.getDialPosition();
 
          int ticks2 = userC2 - userC1;
          randomLock.turnLeft(ticks2);
 
          int ticks3 = 0; 
-         ticks3 = (userC3 > userC2 ) ? fullRotation-(userC3-userC2) : userC2-userC3 ;
+         ticks3 = (userC3 > userC2 ) ? fullRotation-(userC3-userC2) : userC2-userC3;
          randomLock.turnRight(ticks3);
 
          System.out.println("(1st combo testing secret combination: " + userC1 + 
@@ -136,3 +136,29 @@ Enter combo guess:
  * 
  */
 
+
+/*
+ * 
+ * (Random secret combination: 5 30 29)
+Enter combo guess: 5 30 29
+mAmountOfTurns: 1
+mDial is -35
+mDialPis 5
+mAmountOfTurns: 3
+mDial is 29
+mDialPis 69
+mDialMinus 29
+(1st combo testing secret combination: 5 30 29)
+mCombo1 5
+mCombo2 30
+mCombo3 29
+mFirstSpinCombo 5
+mSecondSpinCombo 30
+mLastSpinCombo 29    <----------------- Actual: 29. Expected 29
+mSpinDirection1 right
+mSpinDirection2 left
+mSpinDirection3 right
+mSpinRight right
+you win
+Enter combo guess: 
+ */

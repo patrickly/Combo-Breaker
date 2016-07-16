@@ -113,9 +113,17 @@ public class ComboLock {
 	   ticks = ticks % fullRotation;
      
       mDial -= ticks;
-      
+      System.out.println("mAmountOfTurns: " + mAmountOfTurns); 
+      System.out.println("mDial is " + mDial ) ;
       if(mDial < minDialValue) {
-         mDial = fullRotation + mDial;  
+         
+         mDial = fullRotation + mDial;
+         
+         System.out.println("mDialPis " + mDial ) ;
+         if(mDial>minDialValue){
+            mDial -= fullRotation;
+            System.out.println("mDialMinus " + mDial);
+         }
       }
      
     
