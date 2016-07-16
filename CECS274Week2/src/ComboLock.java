@@ -1,4 +1,3 @@
-////////////////////////////////////////////////////////////////////////////////
 /**
  * Represents a combination lock with members for the combinations, 
  * dial position, user's combinations, spin directions, and amount of turns. 
