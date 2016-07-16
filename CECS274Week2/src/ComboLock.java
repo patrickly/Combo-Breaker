@@ -158,26 +158,9 @@ public class ComboLock {
 
    }
       
-   
 	
 	public boolean open() {
 	   
-	     
-	      
-	      
-	      
-	       
-          
-
-          
-          
-          
-          
-          
-
-
-          
-
 	   if(mCombo1 == mFirstSpinCombo && mCombo2 == mSecondSpinCombo
 	    && mCombo3 == mLastSpinCombo && mSpinDirection1 == mSpinRight
 	    && mSpinDirection2 == mSpinLeft && mSpinDirection3 == mSpinRight) {

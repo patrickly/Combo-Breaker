@@ -11,6 +11,8 @@ public static void main(String[] args) {
    int rng1 = generator.nextInt(40);
    int rng2 = generator.nextInt(40);
    int rng3 = generator.nextInt(40);
+  
+   
    int ex = 10, ex2 = 13, ex3 = 20;
    
    ComboLock randomLock = new ComboLock(rng1, rng2, rng3);
@@ -53,7 +55,6 @@ public static void main(String[] args) {
  // int ticks2 = 3;    // so we want to get 3, when ex is 10, and ex2 is 13. well. 13-10 = 3
   // ex2 - ex = 3.
   int ticks2 = ex2 - ex;
-  
   randomLock.turnLeft(ticks2);
   
   
