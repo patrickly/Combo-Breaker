@@ -107,6 +107,8 @@ public static void main(String[] args) {
      }
   }
   
+  randomLock.reset();
+  
    }
    while(!(ex == 0 && ex2 == 0 && ex3 == 0));
   
@@ -230,6 +232,134 @@ after past 0 mark 1
 
 Congrats you have won free concert tickets.
 Enter combo guess: 
+ * 
+ */
+
+
+
+/***
+ * 
+ * 
+ * (Random secret combination: 21 8 35)
+Enter combo guess: 21 8 35
+21 8 35 
+get initial dial position 0
+
+----
+The amount of turn is 1
+The amount of turn is/are: 1
+The value of ticks modolo 40 is 19
+after ticks decrement -19
+after past 0 mark 21
+
+
+----
+ get 1st dial position 21
+The value of ticks modolo 40 is -13
+after ticks decrement 8
+after past 0 mark 8
+
+
+----
+ get 2nd dial position 8
+The amount of turn is 3
+The amount of turn is/are: 3
+The value of ticks modolo 40 is 13
+after ticks decrement -5
+after past 0 mark 35
+
+
+----
+ get 3rd dial position 35
+(Random secret combination: 21 8 35)
+(1st combo testing secret combination: 21 8 35)
+mCombo1 21
+mCombo2 8
+mCombo3 35
+mFirstSpinCombo 21
+mSecondSpinCombo 8
+mLastSpinCombo 35
+mSpinDirection1 right
+mSpinDirection2 left
+mSpinDirection3 right
+mSpinRight right
+Congrats you have won free concert tickets.
+Enter combo guess: 1 1 1
+1 1 1 
+get initial dial position 0
+
+----
+The amount of turn is 4
+The amount of turn is/are: 4
+The value of ticks modolo 40 is 39
+after ticks decrement -39
+after past 0 mark 1
+
+
+----
+ get 1st dial position 1
+The value of ticks modolo 40 is 0
+after ticks decrement 1
+after past 0 mark 1
+
+
+----
+ get 2nd dial position 1
+The amount of turn is 6
+The amount of turn is/are: 6
+The value of ticks modolo 40 is 0
+after ticks decrement 1
+after past 0 mark 1
+
+
+----
+ get 3rd dial position 1
+(Random secret combination: 21 8 35)
+(1st combo testing secret combination: 1 1 1)
+mCombo1 21
+mCombo2 8
+mCombo3 35
+mFirstSpinCombo 0
+mSecondSpinCombo 0
+mLastSpinCombo 0
+mSpinDirection1 right
+mSpinDirection2 left
+mSpinDirection3 right
+mSpinRight right
+Sorry not a winner.
+Enter combo guess: 0 0 0
+0 0 0 
+get initial dial position 0
+
+----
+The amount of turn is 7
+The amount of turn is/are: 7
+The value of ticks modolo 40 is 0
+after ticks decrement 0
+after past 0 mark 0
+
+
+----
+ get 1st dial position 0
+The value of ticks modolo 40 is 0
+after ticks decrement 0
+after past 0 mark 0
+
+
+----
+ get 2nd dial position 0
+The amount of turn is 9
+The amount of turn is/are: 9
+The value of ticks modolo 40 is 0
+after ticks decrement 0
+after past 0 mark 0
+
+
+----
+ get 3rd dial position 0
+(Random secret combination: 21 8 35)
+(1st combo testing secret combination: 0 0 0)
+
  * 
  */
  
