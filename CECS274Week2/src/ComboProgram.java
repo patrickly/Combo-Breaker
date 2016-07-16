@@ -119,221 +119,106 @@ public static void main(String[] args) {
    
 
 
+// Goal is to get amountOfTurns to show 1 for every combo guess.
 
+// Modified the reset method so that mAmountOfTurns get set back to 0
 
-/*Added if(!(ex == 0 && ex2 == 0 && ex3 == 0)){} code so that
- * when the user quit, "sorry not a winner" will not be displayed.
- * 
- * Entering the correct combo, and then entering the wrong combo still 
- * printed out "winner of concert tickets." so I probably have to put the reset
- * method to reset the dial to 0. 
- * 
- * (Random secret combination: 27 24 0)
-Enter combo guess: 27 24 0
-27 24 0 
+/*
+
+(Random secret combination: 39 21 17)
+Enter combo guess: 7 7 7
+7 7 7 
 get initial dial position 0
 
 ----
 The amount of turn is 1
 The amount of turn is/are: 1
-The value of ticks modolo 40 is 13
-after ticks decrement -13
-after past 0 mark 27
+The value of ticks modolo 40 is 33
+after ticks decrement -33
+after past 0 mark 7
 
 
 ----
- get 1st dial position 27
-The value of ticks modolo 40 is -3
-after ticks decrement 24
-after past 0 mark 24
+ get 1st dial position 7
+The value of ticks modolo 40 is 0
+after ticks decrement 7
+after past 0 mark 7
 
 
 ----
- get 2nd dial position 24
+ get 2nd dial position 7
 The amount of turn is 3
 The amount of turn is/are: 3
-The value of ticks modolo 40 is 24
-after ticks decrement 0
-after past 0 mark 0
-
-
-----
- get 3rd dial position 0
-(Random secret combination: 27 24 0)
-(1st combo testing secret combination: 27 24 0)
-
-Congrats you have won free concert tickets.
-Enter combo guess: 27 24 0
-27 24 0 
-get initial dial position 0
-
-----
-The amount of turn is 4
-The amount of turn is/are: 4
-The value of ticks modolo 40 is 13
-after ticks decrement -13
-after past 0 mark 27
-
-
-----
- get 1st dial position 27
-The value of ticks modolo 40 is -3
-after ticks decrement 24
-after past 0 mark 24
-
-
-----
- get 2nd dial position 24
-The amount of turn is 6
-The amount of turn is/are: 6
-The value of ticks modolo 40 is 24
-after ticks decrement 0
-after past 0 mark 0
-
-
-----
- get 3rd dial position 0
-(Random secret combination: 27 24 0)
-(1st combo testing secret combination: 27 24 0)
-
-Congrats you have won free concert tickets.
-Enter combo guess: 1 1 1 
-1 1 1 
-get initial dial position 0
-
-----
-The amount of turn is 7
-The amount of turn is/are: 7
-The value of ticks modolo 40 is 39
-after ticks decrement -39
-after past 0 mark 1
-
-
-----
- get 1st dial position 1
 The value of ticks modolo 40 is 0
-after ticks decrement 1
-after past 0 mark 1
+after ticks decrement 7
+after past 0 mark 7
 
 
 ----
- get 2nd dial position 1
-The amount of turn is 9
-The amount of turn is/are: 9
-The value of ticks modolo 40 is 0
-after ticks decrement 1
-after past 0 mark 1
-
-
-----
- get 3rd dial position 1
-(Random secret combination: 27 24 0)
-(1st combo testing secret combination: 1 1 1)
-
-Congrats you have won free concert tickets.
-Enter combo guess: 
- * 
- */
-
-
-
-/***
- * 
- * 
- * (Random secret combination: 21 8 35)
-Enter combo guess: 21 8 35
-21 8 35 
-get initial dial position 0
-
-----
-The amount of turn is 1
-The amount of turn is/are: 1
-The value of ticks modolo 40 is 19
-after ticks decrement -19
-after past 0 mark 21
-
-
-----
- get 1st dial position 21
-The value of ticks modolo 40 is -13
-after ticks decrement 8
-after past 0 mark 8
-
-
-----
- get 2nd dial position 8
-The amount of turn is 3
-The amount of turn is/are: 3
-The value of ticks modolo 40 is 13
-after ticks decrement -5
-after past 0 mark 35
-
-
-----
- get 3rd dial position 35
-(Random secret combination: 21 8 35)
-(1st combo testing secret combination: 21 8 35)
-mCombo1 21
-mCombo2 8
-mCombo3 35
-mFirstSpinCombo 21
-mSecondSpinCombo 8
-mLastSpinCombo 35
-mSpinDirection1 right
-mSpinDirection2 left
-mSpinDirection3 right
-mSpinRight right
-Congrats you have won free concert tickets.
-Enter combo guess: 1 1 1
-1 1 1 
-get initial dial position 0
-
-----
-The amount of turn is 4
-The amount of turn is/are: 4
-The value of ticks modolo 40 is 39
-after ticks decrement -39
-after past 0 mark 1
-
-
-----
- get 1st dial position 1
-The value of ticks modolo 40 is 0
-after ticks decrement 1
-after past 0 mark 1
-
-
-----
- get 2nd dial position 1
-The amount of turn is 6
-The amount of turn is/are: 6
-The value of ticks modolo 40 is 0
-after ticks decrement 1
-after past 0 mark 1
-
-
-----
- get 3rd dial position 1
-(Random secret combination: 21 8 35)
-(1st combo testing secret combination: 1 1 1)
-mCombo1 21
-mCombo2 8
-mCombo3 35
-mFirstSpinCombo 0
-mSecondSpinCombo 0
-mLastSpinCombo 0
+ get 3rd dial position 7
+(Random secret combination: 39 21 17)
+(1st combo testing secret combination: 7 7 7)
+mCombo1 39
+mCombo2 21
+mCombo3 17
+mFirstSpinCombo 7
+mSecondSpinCombo 7
+mLastSpinCombo 7
 mSpinDirection1 right
 mSpinDirection2 left
 mSpinDirection3 right
 mSpinRight right
 Sorry not a winner.
-Enter combo guess: 0 0 0
+Enter combo guess: 39 21 17
+39 21 17 
+get initial dial position 0
+
+----
+The amount of turn is 1
+The amount of turn is/are: 1
+The value of ticks modolo 40 is 1
+after ticks decrement -1
+after past 0 mark 39
+
+
+----
+ get 1st dial position 39
+The value of ticks modolo 40 is -18
+after ticks decrement 21
+after past 0 mark 21
+
+
+----
+ get 2nd dial position 21
+The amount of turn is 3
+The amount of turn is/are: 3
+The value of ticks modolo 40 is 4
+after ticks decrement 17
+after past 0 mark 17
+
+
+----
+ get 3rd dial position 17
+(Random secret combination: 39 21 17)
+(1st combo testing secret combination: 39 21 17)
+mCombo1 39
+mCombo2 21
+mCombo3 17
+mFirstSpinCombo 39
+mSecondSpinCombo 21
+mLastSpinCombo 17
+mSpinDirection1 right
+mSpinDirection2 left
+mSpinDirection3 right
+mSpinRight right
+Congrats you have won free concert tickets.
+Enter combo guess: 0 0 0 
 0 0 0 
 get initial dial position 0
 
 ----
-The amount of turn is 7
-The amount of turn is/are: 7
+The amount of turn is 1
+The amount of turn is/are: 1
 The value of ticks modolo 40 is 0
 after ticks decrement 0
 after past 0 mark 0
@@ -348,8 +233,8 @@ after past 0 mark 0
 
 ----
  get 2nd dial position 0
-The amount of turn is 9
-The amount of turn is/are: 9
+The amount of turn is 3
+The amount of turn is/are: 3
 The value of ticks modolo 40 is 0
 after ticks decrement 0
 after past 0 mark 0
@@ -357,10 +242,8 @@ after past 0 mark 0
 
 ----
  get 3rd dial position 0
-(Random secret combination: 21 8 35)
+(Random secret combination: 39 21 17)
 (1st combo testing secret combination: 0 0 0)
 
- * 
- */
- 
 
+*/

@@ -62,6 +62,7 @@ public class ComboLock {
 	   mFirstSpinCombo = 0;
 	   mSecondSpinCombo = 0;
 	   mLastSpinCombo = 0;
+	   mAmountOfTurns = 0;
 	}
 	
 	/**
