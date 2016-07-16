@@ -1,4 +1,4 @@
-
+// Do some tests with ComboLock objects
 public class ComboLockTester {
 
    public static void main(String[] args) {
@@ -10,7 +10,6 @@ public class ComboLockTester {
       c1.turnRight(30); // turn right to position 30. 
       System.out.println("Opening lock c1: " + c1.open()); // true
       
-
       // Test #2:  incorrectly open the lock.  open() should return false.
       // turn the lock right, right, right to the correct numbers.
       ComboLock c2 = new ComboLock (5, 15, 20);
