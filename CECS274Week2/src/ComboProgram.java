@@ -2,9 +2,6 @@ import java.util.*;
 
 public class ComboProgram {
 
-   
-
-
 public static void main(String[] args) {
    
    Random generator = new Random();

@@ -1,28 +1,23 @@
-
+////////////////////////////////////////////////////////////////////////////////
 public class ComboLock {
 
-	
 	private int mCombo1;
 	private int mCombo2;
 	private int mCombo3;
 	private int mDial;
 	
-	/**
-	 * Later, I'm going to add member variables for the boolean open method.
-	 */
 	private int mFirstSpinCombo;
 	private int mSecondSpinCombo;
 	private int mLastSpinCombo;
 
-	private String mSpinLeft = "left";
-	private String mSpinRight = "right";
+	private String mSpinLeft;
+	private String mSpinRight;
 	
 	private String mSpinDirection1;
 	private String mSpinDirection2;
 	private String mSpinDirection3;
 	
 	private int mAmountOfTurns;
-
 
 
 	/**
@@ -71,7 +66,7 @@ public class ComboLock {
 	 */
 	public void turnLeft(int ticks) {
 	   mAmountOfTurns++;
-	  
+	   mSpinLeft = "left";
 
    
 	   int fullRotation = 40;
@@ -80,7 +75,7 @@ public class ComboLock {
 	   
 	   mDial += ticks; 
 	      if(mDial > 39) { // 39 is a max number
-	         mDial = -(fullRotation - mDial) ; // 40 is a magic number. 40 is a full-spin tick. 
+	         mDial = -(fullRotation - mDial) ; 
 	      }
          
       if (mAmountOfTurns == 1) {
@@ -104,25 +99,17 @@ public class ComboLock {
     */
 	public void turnRight(int ticks) {
 	   mAmountOfTurns++;
-	   
-	   
-	   
-
-
-	 
-
-      
+	   mSpinRight = "right";
+	    
 	   int fullRotation = 40;
 	   ticks = ticks % fullRotation;
-      
-
+     
       mDial -= ticks;
       
-
       if(mDial < 0) {
-         mDial = fullRotation + mDial; // 40 is a magic number. 40 is a full-spin tick. 
+         mDial = fullRotation + mDial; // 
       }
-      
+     
          
       if (mAmountOfTurns == 1) {
          mSpinDirection1 = mSpinRight;
@@ -138,26 +125,6 @@ public class ComboLock {
       } 
    }
 	
-	public int getAmountOfTurns() {
-	   return mAmountOfTurns;
-	}
-	
-	public String getTurn1() {
-
-	   return mSpinDirection1;
-	}
-	
-   public String getTurn2() {
-
-      return mSpinDirection2;
-
-      }
-   
-   public String getTurn3() {
-      return mSpinDirection3;
-
-   }
-      
 	
 	public boolean open() {
 	   
