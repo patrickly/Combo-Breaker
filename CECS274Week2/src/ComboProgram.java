@@ -99,10 +99,12 @@ public static void main(String[] args) {
   System.out.println("(1st combo testing secret combination: " + ex + 
    " " + ex2 + " " + ex3 + ")");
   
-  if(randomLock.open()){
-     System.out.println("Congrats you have won free concert tickets.");
-  }else{
-     System.out.println("Sorry not a winner.");
+  if(!(ex == 0 && ex2 == 0 && ex3 == 0)){
+     if(randomLock.open()) {
+        System.out.println("Congrats you have won free concert tickets.");
+     }else {
+        System.out.println("Sorry not a winner.");
+     }
   }
   
    }
@@ -114,19 +116,92 @@ public static void main(String[] args) {
 }
    
 
-/*
- * Entered the wrong combos 1st time, then entered the correct combo 
- * for the second time printed out not a winner. Perhaps I should do a reset
-// * somewhere towards the end before the while loop ?
+
+
+
+/*Added if(!(ex == 0 && ex2 == 0 && ex3 == 0)){} code so that
+ * when the user quit, "sorry not a winner" will not be displayed.
  * 
- * (Random secret combination: 25 38 4)
-Enter combo guess: 1 1 1
-1 1 1 
+ * Entering the correct combo, and then entering the wrong combo still 
+ * printed out "winner of concert tickets." so I probably have to put the reset
+ * method to reset the dial to 0. 
+ * 
+ * (Random secret combination: 27 24 0)
+Enter combo guess: 27 24 0
+27 24 0 
 get initial dial position 0
 
 ----
 The amount of turn is 1
 The amount of turn is/are: 1
+The value of ticks modolo 40 is 13
+after ticks decrement -13
+after past 0 mark 27
+
+
+----
+ get 1st dial position 27
+The value of ticks modolo 40 is -3
+after ticks decrement 24
+after past 0 mark 24
+
+
+----
+ get 2nd dial position 24
+The amount of turn is 3
+The amount of turn is/are: 3
+The value of ticks modolo 40 is 24
+after ticks decrement 0
+after past 0 mark 0
+
+
+----
+ get 3rd dial position 0
+(Random secret combination: 27 24 0)
+(1st combo testing secret combination: 27 24 0)
+
+Congrats you have won free concert tickets.
+Enter combo guess: 27 24 0
+27 24 0 
+get initial dial position 0
+
+----
+The amount of turn is 4
+The amount of turn is/are: 4
+The value of ticks modolo 40 is 13
+after ticks decrement -13
+after past 0 mark 27
+
+
+----
+ get 1st dial position 27
+The value of ticks modolo 40 is -3
+after ticks decrement 24
+after past 0 mark 24
+
+
+----
+ get 2nd dial position 24
+The amount of turn is 6
+The amount of turn is/are: 6
+The value of ticks modolo 40 is 24
+after ticks decrement 0
+after past 0 mark 0
+
+
+----
+ get 3rd dial position 0
+(Random secret combination: 27 24 0)
+(1st combo testing secret combination: 27 24 0)
+
+Congrats you have won free concert tickets.
+Enter combo guess: 1 1 1 
+1 1 1 
+get initial dial position 0
+
+----
+The amount of turn is 7
+The amount of turn is/are: 7
 The value of ticks modolo 40 is 39
 after ticks decrement -39
 after past 0 mark 1
@@ -141,8 +216,8 @@ after past 0 mark 1
 
 ----
  get 2nd dial position 1
-The amount of turn is 3
-The amount of turn is/are: 3
+The amount of turn is 9
+The amount of turn is/are: 9
 The value of ticks modolo 40 is 0
 after ticks decrement 1
 after past 0 mark 1
@@ -150,49 +225,12 @@ after past 0 mark 1
 
 ----
  get 3rd dial position 1
-(Random secret combination: 25 38 4)
+(Random secret combination: 27 24 0)
 (1st combo testing secret combination: 1 1 1)
 
-Sorry not a winner.
-Enter combo guess: 25 38 4
-25 38 4 
-get initial dial position 1
-
-----
-The amount of turn is 4
-The amount of turn is/are: 4
-The value of ticks modolo 40 is 15
-after ticks decrement -14
-after past 0 mark 26
-
-
-----
- get 1st dial position 26
-The value of ticks modolo 40 is 13
-after ticks decrement 39
-after past 0 mark 39
-
-
-----
- get 2nd dial position 39
-The amount of turn is 6
-The amount of turn is/are: 6
-The value of ticks modolo 40 is 34
-after ticks decrement 5
-after past 0 mark 5
-
-
-----
- get 3rd dial position 5
-(Random secret combination: 25 38 4)
-(1st combo testing secret combination: 25 38 4)
-
-Sorry not a winner.
+Congrats you have won free concert tickets.
 Enter combo guess: 
  * 
  */
-
-
-
  
 
