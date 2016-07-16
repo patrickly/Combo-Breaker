@@ -28,7 +28,7 @@ public static void main(String[] args) {
    ex2 = Integer.parseInt(userInput[1]);
    ex3 = Integer.parseInt(userInput[2]);
    
-   System.out.println(ex + " " + ex2 + " " + ex3 + " ");
+   
    
 
       
@@ -36,7 +36,7 @@ public static void main(String[] args) {
    int getDialinit = randomLock.getDialPosition();
  //  int getDial3 = randomLock.getDialPosition();
 
-  System.out.println("get initial dial position " + getDialinit + "\n\n----");
+  
  // int ticks1 = 30; // how to get 30 when ex is 10? 40 +(-10) = 30.    fullRotation is 40. 
   // fullRotation + ex = 40 + 10 = 50. 
   // fullRotation + ex(-1) = 40 - 10 = 30.
@@ -48,14 +48,14 @@ public static void main(String[] args) {
   
   int getDial1 = randomLock.getDialPosition();
 
-  System.out.println("\n\n----\n get 1st dial position " + getDial1);
+  
   
  // int ticks2 = 3;    // so we want to get 3, when ex is 10, and ex2 is 13. well. 13-10 = 3
   // ex2 - ex = 3.
   int ticks2 = ex2 - ex;
   
   randomLock.turnLeft(ticks2);
-  System.out.println("\n\n----\n get 2nd dial position " + randomLock.getDialPosition());
+  
   
   
   int ticks3 = 0;  // goal is to get ticks3 to equal 26, when ex is 10, ex2 is 13, and when ex3 is 27.
@@ -86,7 +86,7 @@ public static void main(String[] args) {
   ticks3 = (ex3 > ex2 ) ? 40-(ex3-ex2) : ex2-ex3 ;
   
   randomLock.turnRight(ticks3);
-  System.out.println("\n\n----\n get 3rd dial position " + randomLock.getDialPosition());
+  
 
   
   
@@ -101,9 +101,9 @@ public static void main(String[] args) {
   
   if(!(ex == 0 && ex2 == 0 && ex3 == 0)){
      if(randomLock.open()) {
-        System.out.println("Congrats you have won free concert tickets.");
+        System.out.println("you win");
      }else {
-        System.out.println("Sorry not a winner.");
+        System.out.println("you lose");
      }
   }
   

@@ -77,14 +77,11 @@ public class ComboLock {
 	   int fullRotation = 40;
 
 	   ticks = ticks % fullRotation;
-	   System.out.println("The value of ticks modolo 40 is " + ticks);
 	   
 	   mDial += ticks; 
-	      System.out.println("after ticks decrement " + mDial);
 	      if(mDial > 39) { // 39 is a max number
 	         mDial = -(fullRotation - mDial) ; // 40 is a magic number. 40 is a full-spin tick. 
 	      }
-	      System.out.println("after past 0 mark " + mDial);
          
       if (mAmountOfTurns == 1) {
          mSpinDirection1 = mSpinLeft;
@@ -109,23 +106,23 @@ public class ComboLock {
 	   mAmountOfTurns++;
 	   
 	   
-	   System.out.println("The amount of turn is " + mAmountOfTurns);
+	   
 
 
 	 
 
-      System.out.println("The amount of turn is/are: " + mAmountOfTurns);
+      
 	   int fullRotation = 40;
 	   ticks = ticks % fullRotation;
-      System.out.println("The value of ticks modolo 40 is " + ticks);
+      
 
       mDial -= ticks;
-      System.out.println("after ticks decrement " + mDial);
+      
 
       if(mDial < 0) {
          mDial = fullRotation + mDial; // 40 is a magic number. 40 is a full-spin tick. 
       }
-      System.out.println("after past 0 mark " + mDial);
+      
          
       if (mAmountOfTurns == 1) {
          mSpinDirection1 = mSpinRight;
@@ -164,19 +161,19 @@ public class ComboLock {
    
 	
 	public boolean open() {
-	   System.out.println("mCombo1 "+ mCombo1);
-	     System.out.println("mCombo2 "+ mCombo2);
-	      System.out.println("mCombo3 "+ mCombo3);
+	   
+	     
 	      
-	      System.out.println("mFirstSpinCombo "+ mFirstSpinCombo);
-	       System.out.println("mSecondSpinCombo "+ mSecondSpinCombo);
-          System.out.println("mLastSpinCombo "+ mLastSpinCombo);
-
-          System.out.println("mSpinDirection1 "+ mSpinDirection1);
-          System.out.println("mSpinDirection2 "+ mSpinDirection2);
-          System.out.println("mSpinDirection3 "+ mSpinDirection3);
+	      
+	      
+	       
           
-          System.out.println("mSpinRight "+ mSpinRight);
+
+          
+          
+          
+          
+          
 
 
           
