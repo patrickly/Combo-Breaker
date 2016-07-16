@@ -59,7 +59,7 @@ public class ComboLock {
 	   mFirstSpinCombo = 0;
 	   mSecondSpinCombo = 0;
 	   mLastSpinCombo = 0;
-	   mAmountOfTurns = 0; System.out.println("hidfdfd");
+	   mAmountOfTurns = 0; 
 	}
 	
 	/**
@@ -112,16 +112,13 @@ public class ComboLock {
 	   ticks = ticks % fullRotation;
      
       mDial -= ticks;
-      System.out.println("mAmountOfTurns: " + mAmountOfTurns); 
-      System.out.println("mDial is " + mDial ) ;
+      
       if(mDial < minDialValue) {
          
          mDial = fullRotation + mDial;
          
-         System.out.println("mDialPis " + mDial ) ;
-         if(mDial>minDialValue){
+         if(mDial>minDialValue) {
             mDial -= fullRotation;
-            System.out.println("mDialMinus " + mDial);
          }
       }
      
@@ -146,21 +143,7 @@ public class ComboLock {
 	 * @return a Boolean for the outcome of opening the lock.
 	 */
 	public boolean open() {
-	   
-	   System.out.println("mCombo1 "+ mCombo1);
-	   System.out.println("mCombo2 "+ mCombo2);
-	   System.out.println("mCombo3 "+ mCombo3);
-
-	   System.out.println("mFirstSpinCombo "+ mFirstSpinCombo);
-	   System.out.println("mSecondSpinCombo "+ mSecondSpinCombo);
-	   System.out.println("mLastSpinCombo "+ mLastSpinCombo);
-
-	   System.out.println("mSpinDirection1 "+ mSpinDirection1);
-	   System.out.println("mSpinDirection2 "+ mSpinDirection2);
-	   System.out.println("mSpinDirection3 "+ mSpinDirection3);
-
-	   System.out.println("mSpinRight "+ mSpinRight);
-	   
+	      
 	   if(mCombo1 == mFirstSpinCombo && mCombo2 == mSecondSpinCombo
 	    && mCombo3 == mLastSpinCombo && mSpinDirection1 == mSpinRight
 	    && mSpinDirection2 == mSpinLeft && mSpinDirection3 == mSpinRight) {

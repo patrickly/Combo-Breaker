@@ -43,9 +43,9 @@ public class ComboProgram {
 
          if(!(userC1 == 0 && userC2 == 0 && userC3 == 0)) {
             if(randomLock.open()) {
-               System.out.println("you win");
+               System.out.println("Correct! You have won free coupons.");
             }else {
-               System.out.println("you lose");
+               System.out.println("Sorry, that is incorrect!");
             }
          }
         
