@@ -9,9 +9,9 @@ public class ComboProgram {
 //      int rng2 = generator.nextInt(40);
 //      int rng3 = generator.nextInt(40);
 
-    int rng1 = 5;
-    int rng2 = 30;
-    int rng3 = 29;
+    int rng1 = 0;
+    int rng2 = 14;
+    int rng3 = 37;
       
       int userC1, userC2, userC3;
 
@@ -161,4 +161,39 @@ mSpinDirection3 right
 mSpinRight right
 you win
 Enter combo guess: 
+ */
+
+/*
+ * (Random secret combination: 0 14 37)
+Enter combo guess: 0 14 37
+mAmountOfTurns: 1
+mDial is 0
+mDialPis 40
+mDialMinus 0
+mAmountOfTurns: 3
+mDial is -3
+mDialPis 37
+(1st combo testing secret combination: 0 14 37)
+mCombo1 0
+mCombo2 14
+mCombo3 37
+mFirstSpinCombo 0
+mSecondSpinCombo 14
+mLastSpinCombo 37        <----------------- Actual: 37. Expected 37
+mSpinDirection1 right
+mSpinDirection2 left
+mSpinDirection3 right
+mSpinRight right
+you win
+Enter combo guess: 0 0 0
+mAmountOfTurns: 1
+mDial is 0
+mDialPis 40
+mDialMinus 0
+mAmountOfTurns: 3
+mDial is 0
+mDialPis 40
+mDialMinus 0
+(1st combo testing secret combination: 0 0 0)
+ * 
  */
