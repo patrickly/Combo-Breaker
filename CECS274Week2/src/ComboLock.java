@@ -29,9 +29,9 @@ public class ComboLock {
 	 * Constructs a ComboLock object that takes three values
 	 * for the lock's combination.
 	 *
-	 * @param combo1 Enter integer values for the range: 0-39
-	 * @param combo2 Enter integer values for the range: 0-39
-	 * @param combo3 Enter integer values for the range: 0-39
+	 * @param combo1 Enter an integer value for the range: 0-39
+	 * @param combo2 Enter an integer values for the range: 0-39
+	 * @param combo3 Enter an integer values for the range: 0-39
 	 */
 	public ComboLock(int combo1, int combo2, int combo3) {
 	   
@@ -43,7 +43,7 @@ public class ComboLock {
 	}
 	
 	/**
-	 *  Gets the current dial position of the lock.
+	 * Gets the current dial position of the lock.
 	 *  
 	 * @return an Integer for the dial position.
 	 */
@@ -52,7 +52,7 @@ public class ComboLock {
 	}
 	
 	/**
-	 * Reset() Sets the dial position back to 0
+	 * Reset the dial position back to 0
 	 * and starts the unlocking procedure over again
 	 */
 	public void reset() {
@@ -136,16 +136,20 @@ public class ComboLock {
 	/**
 	 * Opens the lock
 	 * 
-	 * @return a Boolean for the lock.
+	 * @return a Boolean for the outcome of opening the lock.
 	 */
 	public boolean open() {
 	   
 	   if(mCombo1 == mFirstSpinCombo && mCombo2 == mSecondSpinCombo
 	    && mCombo3 == mLastSpinCombo && mSpinDirection1 == mSpinRight
 	    && mSpinDirection2 == mSpinLeft && mSpinDirection3 == mSpinRight) {
+	      reset();
 	      return true;
 	   }
-	   return false;
+	   else{
+	      reset();
+	      return false;
+	   }
 	}
 	
 }
