@@ -9,9 +9,9 @@ public class ComboProgram {
 //      int rng2 = generator.nextInt(40);
 //      int rng3 = generator.nextInt(40);
 
-    int rng1 = 0;
-    int rng2 = 14;
-    int rng3 = 37;
+    int rng1 = 5;
+    int rng2 = 30;
+    int rng3 = 29;
       
       int userC1, userC2, userC3;
 
@@ -42,7 +42,7 @@ public class ComboProgram {
          randomLock.turnLeft(ticks2);
 
          int ticks3 = 0; 
-         ticks3 = (userC3 > userC2 ) ? 40-(userC3-userC2) : userC2-userC3 ;
+         ticks3 = (userC3 > userC2 ) ? fullRotation-(userC3-userC2) : userC2-userC3 ;
          randomLock.turnRight(ticks3);
 
          System.out.println("(1st combo testing secret combination: " + userC1 + 
@@ -114,3 +114,25 @@ you lose
 Enter combo guess: 
  * 
  */
+
+
+/*
+ * 
+ * (Random secret combination: 5 30 29)
+Enter combo guess: 5 30 29
+(1st combo testing secret combination: 5 30 29)
+mCombo1 5
+mCombo2 30
+mCombo3 29
+mFirstSpinCombo 5
+mSecondSpinCombo 30
+mLastSpinCombo 69    <----------------- Actual: 69. Expected 29             
+mSpinDirection1 right
+mSpinDirection2 left
+mSpinDirection3 right
+mSpinRight right
+you lose
+Enter combo guess: 
+ * 
+ */
+
