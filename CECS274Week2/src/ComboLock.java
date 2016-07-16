@@ -140,6 +140,20 @@ public class ComboLock {
 	 */
 	public boolean open() {
 	   
+	   System.out.println("mCombo1 "+ mCombo1);
+	   System.out.println("mCombo2 "+ mCombo2);
+	   System.out.println("mCombo3 "+ mCombo3);
+
+	   System.out.println("mFirstSpinCombo "+ mFirstSpinCombo);
+	   System.out.println("mSecondSpinCombo "+ mSecondSpinCombo);
+	   System.out.println("mLastSpinCombo "+ mLastSpinCombo);
+
+	   System.out.println("mSpinDirection1 "+ mSpinDirection1);
+	   System.out.println("mSpinDirection2 "+ mSpinDirection2);
+	   System.out.println("mSpinDirection3 "+ mSpinDirection3);
+
+	   System.out.println("mSpinRight "+ mSpinRight);
+	   
 	   if(mCombo1 == mFirstSpinCombo && mCombo2 == mSecondSpinCombo
 	    && mCombo3 == mLastSpinCombo && mSpinDirection1 == mSpinRight
 	    && mSpinDirection2 == mSpinLeft && mSpinDirection3 == mSpinRight) {

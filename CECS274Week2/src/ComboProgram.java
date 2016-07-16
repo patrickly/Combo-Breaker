@@ -93,3 +93,24 @@ Enter combo guess:
 
 Strange I still lose. 
 */
+
+/*
+ * Found the problem.
+ * 
+ * (Random secret combination: 0 14 37)
+Enter combo guess: 0 14 37
+(1st combo testing secret combination: 0 14 37)
+mCombo1 0
+mCombo2 14
+mCombo3 37
+mFirstSpinCombo 40                  <----------------- Actual: 40. Expected 0
+mSecondSpinCombo 14
+mLastSpinCombo 37
+mSpinDirection1 right
+mSpinDirection2 left
+mSpinDirection3 right
+mSpinRight right
+you lose
+Enter combo guess: 
+ * 
+ */
