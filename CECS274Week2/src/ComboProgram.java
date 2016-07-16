@@ -115,10 +115,13 @@ public static void main(String[] args) {
    
 
 /*
+ * Entered the wrong combos 1st time, then entered the correct combo 
+ * for the second time printed out not a winner. Perhaps I should do a reset
+// * somewhere towards the end before the while loop ?
  * 
- * (Random secret combination: 1 15 16)
-Enter combo guess: 1 15 16
-1 15 16 
+ * (Random secret combination: 25 38 4)
+Enter combo guess: 1 1 1
+1 1 1 
 get initial dial position 0
 
 ----
@@ -131,61 +134,65 @@ after past 0 mark 1
 
 ----
  get 1st dial position 1
-The value of ticks modolo 40 is 14
-after ticks decrement 15
-after past 0 mark 15
+The value of ticks modolo 40 is 0
+after ticks decrement 1
+after past 0 mark 1
 
 
 ----
- get 2nd dial position 15
+ get 2nd dial position 1
 The amount of turn is 3
 The amount of turn is/are: 3
-The value of ticks modolo 40 is 39
-after ticks decrement -24
-after past 0 mark 16
+The value of ticks modolo 40 is 0
+after ticks decrement 1
+after past 0 mark 1
 
 
 ----
- get 3rd dial position 16
-(Random secret combination: 1 15 16)
-(1st combo testing secret combination: 1 15 16)
+ get 3rd dial position 1
+(Random secret combination: 25 38 4)
+(1st combo testing secret combination: 1 1 1)
 
-Congrats you have won free concert tickets.
-Enter combo guess: 0 0 0
-0 0 0 
-get initial dial position 16
+Sorry not a winner.
+Enter combo guess: 25 38 4
+25 38 4 
+get initial dial position 1
 
 ----
 The amount of turn is 4
 The amount of turn is/are: 4
-The value of ticks modolo 40 is 0
-after ticks decrement 16
-after past 0 mark 16
+The value of ticks modolo 40 is 15
+after ticks decrement -14
+after past 0 mark 26
 
 
 ----
- get 1st dial position 16
-The value of ticks modolo 40 is 0
-after ticks decrement 16
-after past 0 mark 16
+ get 1st dial position 26
+The value of ticks modolo 40 is 13
+after ticks decrement 39
+after past 0 mark 39
 
 
 ----
- get 2nd dial position 16
+ get 2nd dial position 39
 The amount of turn is 6
 The amount of turn is/are: 6
-The value of ticks modolo 40 is 0
-after ticks decrement 16
-after past 0 mark 16
+The value of ticks modolo 40 is 34
+after ticks decrement 5
+after past 0 mark 5
 
 
 ----
- get 3rd dial position 16
-(Random secret combination: 1 15 16)
-(1st combo testing secret combination: 0 0 0)
+ get 3rd dial position 5
+(Random secret combination: 25 38 4)
+(1st combo testing secret combination: 25 38 4)
 
-Congrats you have won free concert tickets.
-
+Sorry not a winner.
+Enter combo guess: 
  * 
  */
+
+
+
+ 
 
