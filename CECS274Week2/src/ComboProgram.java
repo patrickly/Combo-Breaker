@@ -114,3 +114,78 @@ public static void main(String[] args) {
 }
    
 
+/*
+ * 
+ * (Random secret combination: 1 15 16)
+Enter combo guess: 1 15 16
+1 15 16 
+get initial dial position 0
+
+----
+The amount of turn is 1
+The amount of turn is/are: 1
+The value of ticks modolo 40 is 39
+after ticks decrement -39
+after past 0 mark 1
+
+
+----
+ get 1st dial position 1
+The value of ticks modolo 40 is 14
+after ticks decrement 15
+after past 0 mark 15
+
+
+----
+ get 2nd dial position 15
+The amount of turn is 3
+The amount of turn is/are: 3
+The value of ticks modolo 40 is 39
+after ticks decrement -24
+after past 0 mark 16
+
+
+----
+ get 3rd dial position 16
+(Random secret combination: 1 15 16)
+(1st combo testing secret combination: 1 15 16)
+
+Congrats you have won free concert tickets.
+Enter combo guess: 0 0 0
+0 0 0 
+get initial dial position 16
+
+----
+The amount of turn is 4
+The amount of turn is/are: 4
+The value of ticks modolo 40 is 0
+after ticks decrement 16
+after past 0 mark 16
+
+
+----
+ get 1st dial position 16
+The value of ticks modolo 40 is 0
+after ticks decrement 16
+after past 0 mark 16
+
+
+----
+ get 2nd dial position 16
+The amount of turn is 6
+The amount of turn is/are: 6
+The value of ticks modolo 40 is 0
+after ticks decrement 16
+after past 0 mark 16
+
+
+----
+ get 3rd dial position 16
+(Random secret combination: 1 15 16)
+(1st combo testing secret combination: 0 0 0)
+
+Congrats you have won free concert tickets.
+
+ * 
+ */
+
