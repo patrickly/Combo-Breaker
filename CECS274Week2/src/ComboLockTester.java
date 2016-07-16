@@ -17,6 +17,7 @@ public class ComboLockTester {
 
       System.out.println("Direction 2: " + test.getTurn2());
 
+      
       System.out.println("Direction 3: " + test.getTurn3());
      // test.reset(); // 
       System.out.println(test.open()); //expected false after reset, actual: false
